@@ -242,7 +242,7 @@ export default function Home() {
                   <span className="absolute bottom-1 left-0 w-full h-3 bg-perla-pink/40 -z-10"></span>
                 </h2>
                 <p className="text-perla-textLight mb-8">
-                  Rezervujte si návštěvu u nás telefonicky, emailem nebo přes rezervační formulář. Těšíme se na vás!
+                  Rezervujte si návštěvu u nás telefonicky nebo emailem. Těšíme se na vás!
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -275,9 +275,9 @@ export default function Home() {
                   </a>
                 </div>
 
-                <Link href="/kontakt#rezervace" aria-label="Přejít na online rezervaci">
-                  <Button className="pearl-btn text-base w-full">Rezervovat on-line</Button>
-                </Link>
+                <a href="tel:+420774031001" aria-label="Zavolat na rezervaci">
+                  <Button className="pearl-btn text-base w-full">Zavolat na rezervaci</Button>
+                </a>
               </div>
             </AnimateOnScroll>
           </div>
