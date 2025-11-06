@@ -122,8 +122,8 @@ export default function ContactPage() {
             </div>
             
             <div className="h-[450px] relative rounded-lg overflow-hidden shadow-md">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.902327584764!2d14.45651987688182!3d50.12361491462136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470beaf37a4cbc8d%3A0x2f59bad2dad15f90!2sAnglick%C3%BD%20dv%C5%AFr!5e0!3m2!1sen!2scz!4v1714825854825!5m2!1sen!2scz"
+              <iframe
+                src="https://www.google.com/maps?q=Služská+1865,+182+00+Praha+8&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
