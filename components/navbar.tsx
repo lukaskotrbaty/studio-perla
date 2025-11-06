@@ -15,16 +15,12 @@ import {
 
 const servicesItems = [
   { title: "Kadeřnictví", href: "/sluzby/kadernictvi" },
-  { title: "Kosmetika", href: "/sluzby/kosmetika" },
-  { title: "Masáže", href: "/sluzby/masaze" },
-  { title: "Manikúra & Nehtová Modeláž", href: "/sluzby/nehty" },
 ];
 
 const navItems = [
   { title: "Úvod", href: "/" },
   { title: "Služby", href: "/sluzby", hasSubmenu: true },
   { title: "Ceník", href: "/cenik" },
-  { title: "Galerie", href: "/galerie" },
   { title: "O nás", href: "/o-nas" },
   { title: "Kontakt", href: "/kontakt" },
 ];

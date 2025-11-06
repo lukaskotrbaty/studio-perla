@@ -13,10 +13,10 @@ export default function Home() {
       <ParallaxHero imageUrl="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/_vNbi6vcCTSxlFgUqWeGr/tmpsroarh76.webp">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold text-white mb-6 animate-in fade-in slide-in-from-left duration-700">
-            Vaše oáza krásy a relaxace v&nbsp;srdci Kobylis
+            Profesionální kadeřnictví v&nbsp;srdci Kobylis
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 animate-in fade-in slide-in-from-left duration-700 delay-200">
-            Dopřejte si profesionální péči od hlavy až k&nbsp;patě. Komplexní služby pod jednou střechou.
+            Dopřejte si profesionální péči o vaše vlasy. Střihy, barvení, styling a speciální ošetření.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-700 delay-300">
             <Link href="/sluzby" aria-label="Prohlédnout všechny služby">
@@ -47,8 +47,8 @@ export default function Home() {
               </h2>
               <p className="text-perla-textLight text-lg mt-6">
                 Naše studio je místem, kde se snoubí profesionalita s příjemnou atmosférou.
-                Nabízíme komplexní služby v oblasti kadeřnictví, kosmetiky, masáží a nehtového designu.
-                Vše pod jednou střechou, v příjemném prostředí Anglického dvora v Kobylisích.
+                Nabízíme kompletní kadeřnické služby pro ženy, muže i děti.
+                Střihy, barvení, styling a speciální ošetření vlasů v příjemném prostředí Anglického dvora v Kobylisích.
               </p>
             </div>
           </AnimateOnScroll>
@@ -110,135 +110,62 @@ export default function Home() {
             </h2>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            {/* Kadeřnictví */}
+          <div className="max-w-4xl mx-auto">
             <AnimateOnScroll animation="fade-up" delay={0}>
-              <article className="group">
-                <div className="relative overflow-hidden rounded-lg mb-6 shadow-lg">
-                  <Image
-                    src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/_vNbi6vcCTSxlFgUqWeGr/tmpsroarh76.webp"
-                    alt="Profesionální kadeřnické služby v Studio Perla"
-                    width={600}
-                    height={400}
-                    className="w-full h-[280px] object-cover img-hover-zoom"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-playfair font-medium text-white">
-                    Kadeřnictví
-                  </h3>
+              <article className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="relative h-[400px]">
+                    <Image
+                      src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/_vNbi6vcCTSxlFgUqWeGr/tmpsroarh76.webp"
+                      alt="Profesionální kadeřnické služby v Studio Perla"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <h3 className="text-3xl font-playfair font-medium text-perla-textDark mb-4">
+                      Kompletní kadeřnické služby
+                    </h3>
+                    <p className="text-perla-textLight mb-6">
+                      Nabízíme kompletní škálu kadeřnických služeb pro ženy, muže i děti.
+                      Od klasických střihů až po moderní techniky barvení a speciální ošetření.
+                    </p>
+                    <ul className="space-y-3 mb-6">
+                      <li className="flex items-center">
+                        <div className="h-2 w-2 rounded-full bg-perla-gold mr-3"></div>
+                        <span>Dámské, pánské a dětské střihy</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-2 w-2 rounded-full bg-perla-gold mr-3"></div>
+                        <span>Barvení, melírování, tónování</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-2 w-2 rounded-full bg-perla-gold mr-3"></div>
+                        <span>Společenské a svatební účesy</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-2 w-2 rounded-full bg-perla-gold mr-3"></div>
+                        <span>Regenerační ošetření vlasů</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-2 w-2 rounded-full bg-perla-gold mr-3"></div>
+                        <span>Kvalitní produkty Matrix, BES a CHI</span>
+                      </li>
+                    </ul>
+                    <Link
+                      href="/sluzby/kadernictvi"
+                      className="inline-flex items-center text-perla-gold font-medium hover:opacity-80 transition-all duration-300 hover:translate-x-1 focus-visible-custom"
+                      aria-label="Zjistit více o kadeřnických službách"
+                    >
+                      <span>Zjistit více a ceník</span>
+                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  </div>
                 </div>
-                <p className="text-perla-textLight mb-4">
-                  Dámské, pánské a dětské střihy. Barvení, melír, trvalá. Speciální techniky ošetření vlasů. Používáme produkty Matrix a BES.
-                </p>
-                <Link
-                  href="/sluzby/kadernictvi"
-                  className="inline-flex items-center text-perla-gold font-medium hover:opacity-80 transition-all duration-300 hover:translate-x-1 focus-visible-custom"
-                  aria-label="Zjistit více o kadeřnických službách"
-                >
-                  <span>Zjistit více</span>
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
-              </article>
-            </AnimateOnScroll>
-
-            {/* Kosmetika */}
-            <AnimateOnScroll animation="fade-up" delay={100}>
-              <article className="group">
-                <div className="relative overflow-hidden rounded-lg mb-6 shadow-lg">
-                  <Image
-                    src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/QgAB00LLqZPBQxmr2MmgB/tmpm0vp9v5b.webp"
-                    alt="Profesionální kosmetické služby v Studio Perla"
-                    width={600}
-                    height={400}
-                    className="w-full h-[280px] object-cover img-hover-zoom"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-playfair font-medium text-white">
-                    Kosmetika
-                  </h3>
-                </div>
-                <p className="text-perla-textLight mb-4">
-                  Komplexní péče o pleť, čištění pleti, masky, masáže obličeje. Specializace v oblasti permanentního make-upu. Používáme produkty GERMAINE de CAPUCCINI a Casmara.
-                </p>
-                <Link
-                  href="/sluzby/kosmetika"
-                  className="inline-flex items-center text-perla-gold font-medium hover:opacity-80 transition-all duration-300 hover:translate-x-1 focus-visible-custom"
-                  aria-label="Zjistit více o kosmetických službách"
-                >
-                  <span>Zjistit více</span>
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
-              </article>
-            </AnimateOnScroll>
-
-            {/* Masáže */}
-            <AnimateOnScroll animation="fade-up" delay={200}>
-              <article className="group">
-                <div className="relative overflow-hidden rounded-lg mb-6 shadow-lg">
-                  <Image
-                    src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/EVKkgiss4fpY2SDlZx1xh/tmpq55zxhr0.webp"
-                    alt="Relaxační masáže v Studio Perla"
-                    width={600}
-                    height={400}
-                    className="w-full h-[280px] object-cover img-hover-zoom"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-playfair font-medium text-white">
-                    Masáže
-                  </h3>
-                </div>
-                <p className="text-perla-textLight mb-4">
-                  Rekondiční masáže pro odpočinek a regeneraci. Uvolnění napětí a stresu. Zlepšení krevního oběhu a celkové podpory zdravotního stavu.
-                </p>
-                <Link
-                  href="/sluzby/masaze"
-                  className="inline-flex items-center text-perla-gold font-medium hover:opacity-80 transition-all duration-300 hover:translate-x-1 focus-visible-custom"
-                  aria-label="Zjistit více o masážích"
-                >
-                  <span>Zjistit více</span>
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
-              </article>
-            </AnimateOnScroll>
-
-            {/* Nehty */}
-            <AnimateOnScroll animation="fade-up" delay={300}>
-              <article className="group">
-                <div className="relative overflow-hidden rounded-lg mb-6 shadow-lg">
-                  <Image
-                    src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/jO43i0Dymi5PdlM4Kv05L/tmpewnkjek7.webp"
-                    alt="Manikúra a nehtová modeláž v Studio Perla"
-                    width={600}
-                    height={400}
-                    className="w-full h-[280px] object-cover img-hover-zoom"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-playfair font-medium text-white">
-                    Manikúra & Nehtová Modeláž
-                  </h3>
-                </div>
-                <p className="text-perla-textLight mb-4">
-                  Klasická manikúra, modeláž nehtů, gel lak, akryl. Pestrá škála barev a možností zdobení. Profesionální péče o vaše ruce a nehty.
-                </p>
-                <Link
-                  href="/sluzby/nehty"
-                  className="inline-flex items-center text-perla-gold font-medium hover:opacity-80 transition-all duration-300 hover:translate-x-1 focus-visible-custom"
-                  aria-label="Zjistit více o manikúře a nehtové modeláži"
-                >
-                  <span>Zjistit více</span>
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
               </article>
             </AnimateOnScroll>
           </div>
 
-          <AnimateOnScroll animation="fade-up" delay={400}>
-            <div className="mt-12 text-center">
-              <Link href="/sluzby" aria-label="Zobrazit všechny naše služby">
-                <Button className="pearl-btn text-base px-8">Všechny naše služby</Button>
-              </Link>
-            </div>
-          </AnimateOnScroll>
         </div>
       </section>
 
@@ -262,7 +189,7 @@ export default function Home() {
               </blockquote>
               <div className="mb-4">
                 <p className="font-medium">Petra Nováková</p>
-                <p className="text-perla-textLight">Spokojenná klientka</p>
+                <p className="text-perla-textLight">Spokojená klientka</p>
               </div>
             </div>
           </AnimateOnScroll>

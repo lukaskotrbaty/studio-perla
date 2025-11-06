@@ -38,9 +38,9 @@ export default function HaircareServicePage() {
                 Kadeřnictví
               </h1>
               <p className="text-lg text-perla-textLight mb-8">
-                Naše kadeřnice jsou specialistky na moderní techniky střihu, barvení a stylingu. 
-                Atť potřebujete nový účes, barvu nebo jen ozdravit vaše vlasy, jsme tu pro vás. 
-                Vše s důrazem na zdraví vašich vlasů a s použitím kvalitních produktu značek Matrix a BES.
+                Naše kadeřnice jsou specialistky na moderní techniky střihu, barvení a stylingu.
+                Ať potřebujete nový účes, barvu nebo jen ozdravit vaše vlasy, jsme tu pro vás.
+                Vše s důrazem na zdraví vašich vlasů a s použitím kvalitních produktů značek Matrix a BES.
               </p>
               <Link href="/kontakt#rezervace">
                 <Button className="pearl-btn">Rezervovat návštěvu</Button>
@@ -120,7 +120,7 @@ export default function HaircareServicePage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle2 className="h-4 w-4 text-perla-gold mr-2" />
-                    <span>Oživení a obnovení odstní</span>
+                    <span>Oživení a obnovení odstínu</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle2 className="h-4 w-4 text-perla-gold mr-2" />
@@ -141,8 +141,8 @@ export default function HaircareServicePage() {
               <div>
                 <h3 className="section-subtitle mb-4">Regenerační ošetření</h3>
                 <p className="text-perla-textLight mb-4">
-                  Speciální ošetření pro zpevnění, hydrataci a výživu vlasů. Ideální pro poškozené, suché nebo barvené vlasy. 
-                  Výsledkem je zdravý vzhled, lesk a snadnejší úprava vlasů.
+                  Speciální ošetření pro zpevnění, hydrataci a výživu vlasů. Ideální pro poškozené, suché nebo barvené vlasy.
+                  Výsledkem je zdravý vzhled, lesk a snadnější úprava vlasů.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center">
@@ -151,7 +151,7 @@ export default function HaircareServicePage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle2 className="h-4 w-4 text-perla-gold mr-2" />
-                    <span>Hydrtační kúry</span>
+                    <span>Hydratační kúry</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle2 className="h-4 w-4 text-perla-gold mr-2" />
@@ -191,7 +191,7 @@ export default function HaircareServicePage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle2 className="h-4 w-4 text-perla-gold mr-2" />
-                    <span>Účesy pro druačky a svatební hosty</span>
+                    <span>Účesy pro družičky a svatební hosty</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle2 className="h-4 w-4 text-perla-gold mr-2" />
@@ -204,7 +204,7 @@ export default function HaircareServicePage() {
           
           <div className="text-center mt-8">
             <p className="text-perla-textLight italic mb-6">
-              "Naším cílem je, abyste odcházeli nejen s krásným účesem, ale také s úsmněvem a dobrou náladou."
+              "Naším cílem je, abyste odcházeli nejen s krásným účesem, ale také s úsměvem a dobrou náladou."
             </p>
             <Link href="/kontakt#rezervace">
               <Button className="pearl-btn">Rezervovat návštěvu</Button>
