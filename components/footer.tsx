@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -12,8 +12,7 @@ export default function Footer() {
               Studio Perla
             </h3>
             <p className="text-sm opacity-90 max-w-xs">
-              Profesionální péče o vaši krásu a pohodu pod jednou střechou.
-              Kadeřnictví, kosmetika, masáže a nehtové studio.
+              Profesionální kadeřnické služby - střihy, barvení, stylingu a péče o vlasy.
             </p>
             <div className="flex space-x-4 pt-2">
               <a
@@ -24,13 +23,6 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-perla-gold transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -67,14 +59,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/galerie"
-                  className="text-sm opacity-90 hover:opacity-100 hover:text-perla-champagne transition-colors"
-                >
-                  Galerie
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/o-nas"
                   className="text-sm opacity-90 hover:opacity-100 hover:text-perla-champagne transition-colors"
                 >
@@ -104,30 +88,6 @@ export default function Footer() {
                   className="text-sm opacity-90 hover:opacity-100 hover:text-perla-champagne transition-colors"
                 >
                   Kadeřnictví
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/sluzby/kosmetika"
-                  className="text-sm opacity-90 hover:opacity-100 hover:text-perla-champagne transition-colors"
-                >
-                  Kosmetika
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/sluzby/masaze"
-                  className="text-sm opacity-90 hover:opacity-100 hover:text-perla-champagne transition-colors"
-                >
-                  Masáže
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/sluzby/nehty"
-                  className="text-sm opacity-90 hover:opacity-100 hover:text-perla-champagne transition-colors"
-                >
-                  Manikúra & Nehtová Modeláž
                 </Link>
               </li>
             </ul>
