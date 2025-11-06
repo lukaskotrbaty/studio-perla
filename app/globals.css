@@ -63,36 +63,94 @@
   .container-custom {
     @apply container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-playfair font-medium text-perla-textDark mb-6 md:mb-8;
   }
-  
+
   .section-subtitle {
     @apply text-xl md:text-2xl font-playfair text-perla-textDark mb-3;
   }
-  
+
   .pearl-btn {
-    @apply px-6 py-3 rounded-md bg-perla-gold text-white font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-md;
+    @apply px-6 py-3 rounded-md bg-perla-gold text-white font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:scale-105 active:scale-100 focus:outline-none focus:ring-2 focus:ring-perla-gold focus:ring-offset-2;
   }
-  
+
   .pearl-card {
-    @apply bg-white rounded-md shadow-sm p-6 hover:shadow-md transition-shadow duration-300;
+    @apply bg-white rounded-lg shadow-sm p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
   }
-  
+
+  .pearl-card-glass {
+    @apply bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-6 border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+
   .pearl-shine {
     @apply relative overflow-hidden;
   }
-  
+
   .pearl-shine::after {
     @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer;
   }
-  
+
   .font-playfair {
     font-family: 'Playfair Display', serif;
   }
-  
+
   .font-inter {
     font-family: 'Inter', sans-serif;
   }
+
+  /* Modern gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-perla-gold via-perla-champagne to-perla-gold bg-clip-text text-transparent;
+  }
+
+  /* Glassmorphism effect */
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  /* Image hover effect */
+  .img-hover-zoom {
+    @apply transition-transform duration-700 ease-out hover:scale-110;
+  }
+
+  /* Focus visible styles for accessibility */
+  .focus-visible-custom {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-perla-gold focus-visible:ring-offset-2;
+  }
+}
+
+/* Custom scrollbar */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-perla-cream;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-perla-gold rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-perla-gold/80;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-perla-gold/30 text-perla-textDark;
+}
+
+/* Focus visible for better accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-perla-gold ring-offset-2;
 }

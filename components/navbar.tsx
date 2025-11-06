@@ -132,18 +132,24 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-perla-textDark hover:text-perla-gold transition-colors"
-          aria-label="Toggle menu"
+          className="md:hidden text-perla-textDark hover:text-perla-gold transition-colors focus-visible-custom"
+          aria-label={isOpen ? "Zavřít menu" : "Otevřít menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} md:hidden pt-20`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigační menu"
       >
-        <div className="container-custom flex flex-col space-y-4 p-4">
+        <nav className="container-custom flex flex-col space-y-4 p-4" aria-label="Mobilní navigace">
           {navItems.map((item) =>
             item.hasSubmenu ? (
               <div key={item.title} className="space-y-2">
@@ -152,16 +158,23 @@ export default function Navbar() {
                     e.currentTarget.nextElementSibling?.classList.toggle(
                       "hidden"
                     );
+                    const expanded = e.currentTarget.getAttribute("aria-expanded") === "true";
+                    e.currentTarget.setAttribute("aria-expanded", String(!expanded));
                   }}
-                  className="flex w-full justify-between items-center py-2 text-lg font-medium"
+                  className="flex w-full justify-between items-center py-2 text-lg font-medium focus-visible-custom"
+                  aria-expanded="false"
+                  aria-controls={`submenu-${item.title}`}
                 >
                   {item.title}
-                  <ChevronDown size={20} />
+                  <ChevronDown size={20} aria-hidden="true" />
                 </button>
-                <div className="hidden pl-4 space-y-2 border-l-2 border-perla-champagne">
+                <div
+                  id={`submenu-${item.title}`}
+                  className="hidden pl-4 space-y-2 border-l-2 border-perla-champagne"
+                >
                   <Link
                     href={item.href}
-                    className="block py-2 hover:text-perla-gold"
+                    className="block py-2 hover:text-perla-gold focus-visible-custom rounded"
                     onClick={() => setIsOpen(false)}
                   >
                     Všechny služby
@@ -170,7 +183,7 @@ export default function Navbar() {
                     <Link
                       key={service.title}
                       href={service.href}
-                      className="block py-2 hover:text-perla-gold"
+                      className="block py-2 hover:text-perla-gold focus-visible-custom rounded"
                       onClick={() => setIsOpen(false)}
                     >
                       {service.title}
@@ -182,7 +195,7 @@ export default function Navbar() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="block py-2 text-lg font-medium hover:text-perla-gold"
+                className="block py-2 text-lg font-medium hover:text-perla-gold focus-visible-custom rounded"
                 onClick={() => setIsOpen(false)}
               >
                 {item.title}
@@ -193,10 +206,11 @@ export default function Navbar() {
             href="/kontakt#rezervace"
             className="pearl-btn text-center mt-4"
             onClick={() => setIsOpen(false)}
+            aria-label="Rezervovat návštěvu"
           >
             Rezervovat
           </Link>
-        </div>
+        </nav>
       </div>
     </nav>
   );
