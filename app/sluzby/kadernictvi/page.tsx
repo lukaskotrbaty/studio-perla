@@ -132,10 +132,12 @@ export default function HaircareServicePage() {
             
             <div className="flex items-start">
               <div className="bg-perla-champagne/30 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 mt-1 mr-6">
-                <img 
-                  src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/ABvM1hXTN4s9V_yvJ1yr_/tmp0su9woih.webp" 
-                  alt="Studio Perla Logo" 
-                  className="h-9 w-9 object-contain"
+                <Image
+                  src="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/ABvM1hXTN4s9V_yvJ1yr_/tmp0su9woih.webp"
+                  alt="Studio Perla Logo"
+                  width={36}
+                  height={36}
+                  className="object-contain"
                 />
               </div>
               <div>
@@ -204,7 +206,7 @@ export default function HaircareServicePage() {
           
           <div className="text-center mt-8">
             <p className="text-perla-textLight italic mb-6">
-              "Naším cílem je, abyste odcházeli nejen s krásným účesem, ale také s úsměvem a dobrou náladou."
+              &ldquo;Naším cílem je, abyste odcházeli nejen s krásným účesem, ale také s úsměvem a dobrou náladou.&rdquo;
             </p>
             <Link href="/kontakt#rezervace">
               <Button className="pearl-btn">Rezervovat návštěvu</Button>

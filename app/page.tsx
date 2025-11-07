@@ -12,10 +12,16 @@ export default function Home() {
       {/* Hero Section with Parallax */}
       <ParallaxHero imageUrl="https://assets.macaly-user-data.dev/gg8u98y9pbuu73m0ab9w3g49/nr7nq0uvs8lscahjx2oigjwq/_vNbi6vcCTSxlFgUqWeGr/tmpsroarh76.webp">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold text-white mb-6 animate-in fade-in slide-in-from-left duration-700">
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold text-white mb-6 animate-in fade-in slide-in-from-left duration-700"
+            style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.7), 0px 2px 4px rgba(0, 0, 0, 0.5)' }}
+          >
             Profesionální kadeřnictví v&nbsp;srdci Kobylis
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 animate-in fade-in slide-in-from-left duration-700 delay-200">
+          <p
+            className="text-lg md:text-xl text-white/90 mb-8 animate-in fade-in slide-in-from-left duration-700 delay-200"
+            style={{ textShadow: '1px 2px 8px rgba(0, 0, 0, 0.6), 0px 1px 3px rgba(0, 0, 0, 0.4)' }}
+          >
             Dopřejte si profesionální péči o vaše vlasy. Střihy, barvení, styling a speciální ošetření.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-700 delay-300">
@@ -184,7 +190,7 @@ export default function Home() {
                 </div>
               </div>
               <blockquote className="text-2xl md:text-3xl font-playfair italic mb-8">
-                "Úžasný zážitek a profesionální přístup. Odcházím vždy spokojenná a s krásným účesem. Vřele doporučuji!"
+                &ldquo;Úžasný zážitek a profesionální přístup. Odcházím vždy spokojenná a s krásným účesem. Vřele doporučuji!&rdquo;
               </blockquote>
               <div className="mb-4">
                 <p className="font-medium">Petra Nováková</p>
