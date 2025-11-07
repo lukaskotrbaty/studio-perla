@@ -129,9 +129,7 @@ export function generateLocalBusinessSchema() {
       reviewCount: "127",
     },
     sameAs: [
-      // Add social media links when available
-      // "https://www.facebook.com/studioperla",
-      // "https://www.instagram.com/studioperla",
+      "https://www.facebook.com/studioperla1/",
     ],
   };
 }

@@ -105,8 +105,7 @@ export default function Home() {
         <div className="container-custom">
           <AnimateOnScroll animation="fade-up">
             <h2 className="section-title text-center mb-12">
-              <span className="relative z-10">Naše služby</span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-perla-pink/40 -z-10"></span>
+              Naše služby
             </h2>
           </AnimateOnScroll>
 

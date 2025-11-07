@@ -1,24 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { format } from "date-fns";
-import { cs } from "date-fns/locale";
-import { CalendarIcon, Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
-import { toast } from "sonner";
-
-const times = [
-  "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", 
-  "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", 
-  "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"
-];
+import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 
 export default function ContactPage() {
 
@@ -98,24 +81,15 @@ export default function ContactPage() {
                     <Facebook className="text-perla-gold h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Sociální sítě</h3>
-                    <div className="flex items-center space-x-3">
-                      <a
-                        href="https://www.facebook.com/studioperla1/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-perla-textLight hover:text-perla-gold transition-colors"
-                      >
-                        Facebook
-                      </a>
-                      <span>&bull;</span>
-                      <a
-                        href="#"
-                        className="text-perla-textLight hover:text-perla-gold transition-colors"
-                      >
-                        Instagram
-                      </a>
-                    </div>
+                    <h3 className="font-medium mb-1">Facebook</h3>
+                    <a
+                      href="https://www.facebook.com/studioperla1/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-perla-textLight hover:text-perla-gold transition-colors"
+                    >
+                      Facebook
+                    </a>
                   </div>
                 </div>
               </div>
