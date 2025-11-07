@@ -40,8 +40,8 @@ export default function Navbar() {
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/90 backdrop-blur-md shadow-lg py-3"
+          : "bg-white/30 backdrop-blur-md py-5"
       )}
     >
       <div className="container-custom flex justify-between items-center">
@@ -92,7 +92,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} md:hidden pt-20`}
+        className={`fixed inset-0 bg-white/95 backdrop-blur-lg z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} md:hidden pt-20`}
         role="dialog"
         aria-modal="true"
         aria-label="Navigační menu"

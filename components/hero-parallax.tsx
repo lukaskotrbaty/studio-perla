@@ -33,7 +33,7 @@ export function ParallaxHero({ imageUrl, children }: ParallaxHeroProps) {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40"></div>
         </div>
       </div>
 
