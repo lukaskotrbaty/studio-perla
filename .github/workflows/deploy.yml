@@ -1,33 +1,94 @@
-name: Deploy to GitHub Pages
+name: Deploy Static Site to GitHub Pages
 
 on:
+  # Spustí se při push do main (po merge PR)
   push:
     branches: [ main ]
 
+  # Spustí se při vytvoření nebo úpravě pull requestu
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened]
+
+  # Umožňuje manuální spuštění z Actions tabu
+  workflow_dispatch:
+
+# Nastavení oprávnění pro deployment na GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write
+
+# Povolí pouze jeden současný deployment
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  # Build job - zkopíruje statické soubory
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Create deployment directory
+        run: |
+          mkdir -p _site
+          # Zkopíruj všechny HTML, CSS, JS soubory
+          cp -r *.html *.css *.js _site/ 2>/dev/null || true
+          # Zkopíruj favicon a další assety, pokud existují
+          cp -r favicon.ico _site/ 2>/dev/null || true
+          cp -r images _site/ 2>/dev/null || true
+          cp -r assets _site/ 2>/dev/null || true
+          # Vypiš obsah pro kontrolu
+          echo "Contents of _site directory:"
+          ls -la _site/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: '18'
+          path: ./_site
 
-      - name: Install dependencies
-        run: npm ci
+  # Deployment job - nasadí na GitHub Pages pouze po merge do main
+  deploy:
+    # Spustí se pouze při push do main (ne při PR)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+  # Preview deployment pro pull requesty
+  preview:
+    # Spustí se pouze při pull requestu
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Comment PR with preview info
+        uses: actions/github-script@v7
         with:
-          folder: out
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🚀 Preview Build Successful!\n\n` +
+                    `✅ Statické HTML soubory byly úspěšně sestaveny.\n\n` +
+                    `Po merge tohoto PR do \`main\` větve bude web automaticky nasazen na GitHub Pages.\n\n` +
+                    `**Změněné soubory:**\n` +
+                    `- HTML stránky\n` +
+                    `- CSS styly\n` +
+                    `- JavaScript funkce\n\n` +
+                    `Pro lokální preview stáhněte branch a otevřete \`index.html\` v prohlížeči.`
+            })
