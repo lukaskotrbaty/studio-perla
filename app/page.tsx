@@ -190,7 +190,7 @@ export default function Home() {
                 </div>
               </div>
               <blockquote className="text-2xl md:text-3xl font-playfair italic mb-8">
-                "Úžasný zážitek a profesionální přístup. Odcházím vždy spokojenná a s krásným účesem. Vřele doporučuji!"
+                &ldquo;Úžasný zážitek a profesionální přístup. Odcházím vždy spokojenná a s krásným účesem. Vřele doporučuji!&rdquo;
               </blockquote>
               <div className="mb-4">
                 <p className="font-medium">Petra Nováková</p>
