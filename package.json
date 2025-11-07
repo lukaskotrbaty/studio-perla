@@ -1,9 +1,0 @@
-{
-  "name": "studio-perla",
-  "version": "1.0.0",
-  "description": "Kadeřnické a kosmetické studio Perla - vanilla JS website",
-  "private": true,
-  "scripts": {
-    "deploy": "echo 'Deploy script - not yet configured'"
-  }
-}
